@@ -1,6 +1,30 @@
  // Image gallery data
     // This can be moved to a separate JSON file for easier management
     const galleryData = [
+     {
+        id: 99,
+        title: "Kaburger Wrap",
+        category: "automotive",
+        src: "https://res.cloudinary.com/dtqobhfme/image/upload/v1753959425/20130710-kaburger-menu-30_eptmlc.jpg",
+        description: "Beautifully crafted wrap",
+        orientation: "portrait"
+      },
+     {
+        id: 98,
+        title: "Kaburger Chicken Plate",
+        category: "automotive",
+        src: "https://res.cloudinary.com/dtqobhfme/image/upload/v1753959424/20130710-kaburger-menu-11_why5qi.jpg",
+        description: "Beautifully crafted chicken plate",
+        orientation: "portrait"
+      },
+     {
+        id: 97,
+        title: "Kaburger Burger",
+        category: "automotive",
+        src: "https://res.cloudinary.com/dtqobhfme/image/upload/v1753959425/20130710-kaburger-menu-24_encead.jpg",
+        description: "Beautifully crafted Burger",
+        orientation: "portrait"
+      },
       {
         id: 1,
         title: "Porsche B&W",
