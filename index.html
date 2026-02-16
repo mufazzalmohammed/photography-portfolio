@@ -3,47 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photography Portfolio</title>
+  <title>Mufazzal Mohammed | Photography</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- Even simpler favicon using emoji -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>">
 </head>
-<body>
-  <header>
-    <div class="container">
-      <h1 class="logo">MUFAZZAL MOHAMMED FEYZEE</h1>
+
+<body class="dark-theme home-page">
+  <!-- Simple Navigation -->
+  <nav class="simple-nav">
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
     </div>
-  </header>
-  
-  <div class="container">
-    <nav class="categories">
-      <button class="category-btn active" data-category="all">All</button>
-      <button class="category-btn" data-category="automotive">Automotive</button>
-      <button class="category-btn" data-category="landscape">Posters</button>
-      <button class="category-btn" data-category="wildlife">Wildlife</button>
-      <button class="category-btn" data-category="architecture">Architecture</button>
-    </nav>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="home-content">
+    <!-- MM Logo -->
+    <div class="logo-container">
+      <h1 class="mm-logo">MM</h1>
+    </div>
     
-    <div class="gallery-container">
-      <div class="gallery" id="gallery">
-        <!-- Gallery items will be inserted here -->
+    <!-- Name -->
+    <div class="name-container">
+      <h2 class="full-name">Mufazzal Mohammed</h2>
+      <p class="subtitle">Photography Portfolio</p>
+    </div>
+
+    <!-- Explore Button -->
+    <div class="explore-container">
+      <a href="portfolio.html" class="explore-btn">
+        <span>Explore My Work</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </main>
+
+  <!-- NO FOOTER/COPYRIGHT ON HOMEPAGE -->
+   <!-- Contact Modal -->
+<div class="modal-overlay" id="contactModal">
+  <div class="modal-container">
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h2 class="modal-title">Get In Touch</h2>
+      <button class="modal-close" id="closeModalBtn">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="modal-body">
+      <p class="modal-description">
+        Fill out the form below and I'll get back to you as soon as possible.
+      </p>
+
+      <form id="contactForm" class="contact-form">
+        <!-- Name Field -->
+        <div class="form-group">
+          <label for="name" class="form-label">
+            <i class="fas fa-user"></i> Your Name
+          </label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            class="form-input" 
+            placeholder="John Doe" 
+            required
+          >
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email" class="form-label">
+            <i class="fas fa-envelope"></i> Your Email
+          </label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            class="form-input" 
+            placeholder="john@example.com" 
+            required
+          >
+        </div>
+
+        <!-- Subject Field -->
+        <div class="form-group">
+          <label for="subject" class="form-label">
+            <i class="fas fa-tag"></i> Subject
+          </label>
+          <input 
+            type="text" 
+            id="subject" 
+            name="subject" 
+            class="form-input" 
+            placeholder="Photography Inquiry" 
+            required
+          >
+        </div>
+
+        <!-- Message Field -->
+        <div class="form-group">
+          <label for="message" class="form-label">
+            <i class="fas fa-comment"></i> Message
+          </label>
+          <textarea 
+            id="message" 
+            name="message" 
+            class="form-textarea" 
+            placeholder="Tell me about your project..." 
+            rows="5" 
+            required
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="form-submit" id="submitBtn">
+          <span class="submit-text">Send Message</span>
+          <span class="submit-spinner" style="display: none;">
+            <i class="fas fa-spinner fa-spin"></i>
+          </span>
+        </button>
+      </form>
+
+      <!-- Success Message (hidden by default) -->
+      <div class="form-success" id="successMessage" style="display: none;">
+        <i class="fas fa-check-circle"></i>
+        <h3>Message Sent!</h3>
+        <p>Thank you for reaching out. I'll get back to you soon.</p>
       </div>
     </div>
   </div>
-  <button id="topButton" title="Go to top">↑</button>
-  <footer>
-    <div class="container">
-      <div class="social-links">
-        <a href="https://instagram.com/feyzeem" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="mailto:itsmufazzalphotography@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="tel:+971523411720"><i class="fas fa-phone"></i></a>
-      </div>
-      <div class="contact-info">
-        <p>© 2025 Mufazzal Mohammed. All rights reserved.</p>
-        <p>itsmufazzalphotography@gmail.com | +971 52 341 1720</p>
-      </div>
-    </div>
-  </footer>
-
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
